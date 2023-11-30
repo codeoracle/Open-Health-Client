@@ -3,6 +3,7 @@ $medium: 1200px;
 
 .result{
 width: 100%;
+overflow: hidden;
 
 .resultWrap{
 display: flex;
@@ -48,9 +49,11 @@ height: 40vh;
 overflow: hidden;
 display: flex;
 justify-content: center;
+margin-bottom: 5%;
 
 @media screen and (max-width: $small) {
 height: 50vh;
+margin-bottom: 10%;
 }
 
 .callAction{
