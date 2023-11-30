@@ -1,0 +1,48 @@
+$small: 900px;
+$medium: 1200px;
+
+.loading{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-top: 7%;
+
+@media screen and (max-width: $medium) {
+margin-top: 15%;
+margin-right: 7%;
+margin-left: 7%;
+}
+@media screen and (max-width: $small) {
+margin-top: 15%;
+margin-right: 7%;
+margin-left: 7%;
+}
+
+.loadinWrap{
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+margin-bottom: 5%;
+
+.loadHead{
+color: #003e48;
+font-size: 30px;
+
+@media screen and (max-width: $small) {
+font-size: 24px;
+}
+}
+.loadText{
+color: #595959;
+font-size: 30px;
+@media screen and (max-width: $small) {
+font-size: 24px;
+}
+}
+}
+.loadingBar{
+color: #eb734a;
+}
+}

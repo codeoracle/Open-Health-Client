@@ -1,0 +1,168 @@
+$small: 900px;
+$medium: 1200px;
+
+.askai{
+// position: relative;
+height: 90vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+
+@media screen and (max-width: $small) {
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.askaiCointainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;  
+
+  .askaiWrap{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 50px;
+
+.askContent{
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+
+.askTitle{
+font-size: 40px;
+color: #003e48;
+
+@media screen and (max-width: $small) {
+font-size: 24px;
+}
+}
+.askContent{
+font-size: 16px;
+font-weight: 500;
+color: #595959;
+}
+}
+
+.formWrap{
+display: flex;
+flex-direction: column;
+gap: 30px;
+width: 100%;
+
+.formItemInp{
+display: flex;
+gap: 30px;
+
+
+.formLab{
+color: #003e48;
+font-size: 18px;
+// font-weight: 500;
+display: none;
+}
+.formInp{
+padding: 15px;
+border: 1px solid #80808095;
+outline: none;
+width: 100%;
+height: 35px;
+border-radius: 5px;
+
+&::placeholder{
+color: #808080e8;
+font-size: 18px;
+font-weight: 500;
+}
+}
+}
+
+.formItemsWrap{
+display: flex;
+justify-content: center;
+gap: 50px;
+
+.formItemAge{
+    display: flex;
+    gap: 30px;
+    .formLab{
+    color: #003e48;
+    font-size: 18px;
+    font-weight: 500;
+    display: none;
+    }
+    .formInpAge {
+    padding: 15px;
+    border: 1px solid #80808095;
+    outline: none;
+    width: 60%;
+    height: 35px;
+    border-radius: 5px;
+    
+    &::placeholder {
+    color: #808080e8;
+    font-size: 18px;
+    font-weight: 500;
+        }
+    }
+}
+.formItemGen{
+    display: flex;
+    gap: 30px;
+
+    .formLab{
+    color: #003e48;
+    font-size: 18px;
+    font-weight: 500;
+    display: none;
+    }
+    .formInpGen {
+    padding: 15px;
+    border: 1px solid #80808095;
+    outline: none;
+    width: 10rem;
+    // height: 35px;
+    border-radius: 5px;
+    color: #808080e8;
+    font-size: 18px;
+    font-weight: 500;
+    
+    }
+}
+}
+
+.heroBtn{
+background-color: #da5e39;
+border: 2px solid #da5e39;
+border-radius: 4px;
+color: #fff;
+padding: 13px 0;
+font-size: 20px;
+font-weight: 500;
+cursor: pointer;
+text-align: center;
+
+&:hover{
+border: 2px solid #e85a2e;
+background-color: #e85a2e;
+color: #fff;
+gap: 15px;
+}
+
+}
+}
+}
+}
+
+.footerWrap{
+width: 80%;
+
+@media screen and (max-width: $small) {
+width: 100%;
+}
+}
+}

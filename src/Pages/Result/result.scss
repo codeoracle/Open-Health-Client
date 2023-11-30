@@ -1,0 +1,272 @@
+$small: 900px;
+$medium: 1200px;
+
+.result{
+width: 100%;
+
+.resultWrap{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 4%;
+gap: 50px;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 5%;
+
+@media screen and (max-width: $medium) {
+margin-top: 7%;
+margin-right: 2%;
+margin-left: 2%;
+margin-bottom: 3%;
+}
+@media screen and (max-width: $small) {
+margin-top: 7%;
+margin-right: 2%;
+margin-left: 2%;
+margin-bottom: 3%;
+}
+
+.resultTitle{
+font-size: 40px;
+color: #003e48;
+
+@media screen and (max-width: $medium) {
+font-size: 30px;
+}
+@media screen and (max-width: $small) {
+font-size: 30px;
+}
+}
+
+}
+
+.callActionWrap{
+background: #CE4116;
+height: 40vh;
+overflow: hidden;
+display: flex;
+justify-content: center;
+
+@media screen and (max-width: $small) {
+height: 50vh;
+}
+
+.callAction{
+display: flex;
+align-items: center;
+// margin-left: 10%;
+
+@media screen and (max-width: $medium) {
+flex-direction: column;
+justify-content: center;
+gap: 20px;
+}
+@media screen and (max-width: $small) {
+flex-direction: column;
+justify-content: center;
+gap: 20px;
+}
+.callContent{
+display: flex;
+flex-direction: column;
+gap: 30px;
+width: 60%;
+
+@media screen and (max-width: $medium) {
+width: 100%;
+gap: 10px;
+}
+@media screen and (max-width: $small) {
+width: 100%;
+gap: 10px;
+}
+
+.callTitle{
+font-size: 40px;
+font-weight: bold;
+color: #ffffff;
+width: 60%;
+
+@media screen and (max-width: $medium) {
+width: 100%;
+font-size: 24px;
+text-align: center;
+}
+@media screen and (max-width: $small) {
+width: 100%;
+font-size: 20px;
+text-align: center;
+}
+}
+.callText{
+font-size: 24px;
+font-weight: 500;
+color: #ffffff;
+width: 45%;
+
+@media screen and (max-width: $medium) {
+width: 100%;
+font-size: 16px;
+text-align: center;
+}
+@media screen and (max-width: $small) {
+width: 100%;
+font-size: 14px;
+text-align: center;
+}
+}
+}
+
+.options{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 30%;
+
+@media screen and (max-width: $medium) {
+flex-direction: row;
+gap: 10px;
+width: 100%;
+}
+@media screen and (max-width: $small) {
+flex-direction: column;
+gap: 10px;
+width: 80%;
+}
+
+.optionList{
+display: flex;
+align-items: center;
+gap: 20px;
+background: #ffffff;
+padding: 20px;
+border-radius: 5px;
+cursor: pointer;
+text-decoration: none;
+
+&:hover{
+background: #FAECE8;
+}
+
+@media screen and (max-width: $medium) {
+gap: 10px;
+width: 100%;
+}
+@media screen and (max-width: $small) {
+gap: 20px;
+padding: 10px;
+width: 100%;
+}
+
+.fIcon{
+color: #000;
+font-size: 3rem;
+
+@media screen and (max-width: $medium) {
+font-size: 2rem;
+}
+@media screen and (max-width: $small) {
+font-size: 2rem;
+}
+}
+.optionContent{
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 100%;
+
+.optionHead {
+font-size: 24px;
+font-weight: 600;
+color: #383233;
+
+@media screen and (max-width: $medium) {
+font-size: 16px;
+font-weight: 600;
+}
+@media screen and (max-width: $small) {
+font-size: 16px;
+font-weight: 600;
+}
+}
+.optiontxt {
+font-size: 16px;
+color: #383233;
+
+@media screen and (max-width: $medium) {
+font-size: 14px;
+}
+@media screen and (max-width: $small) {
+font-size: 14px;
+}
+}
+}
+.lIcon{
+color: #e85a2e;
+font-size: 2rem;
+@media screen and (max-width: $medium) {
+display: none;
+}
+@media screen and (max-width: $small) {
+display: none;
+}
+}
+}
+}
+
+}
+}
+}
+
+.restContent{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+margin-bottom: 3%;
+
+@media screen and (max-width: $medium) {
+gap: 10px;
+}
+@media screen and (max-width: $small) {
+gap: 10px;
+}
+
+.resTitle{
+font-size: 20px;
+font-weight: bold;
+border-top: 2px solid #6373804f;
+padding-top: 20px;
+color: #003e48;
+max-width: 100%;
+
+&:hover{
+color: #eb734a;
+border-top: 2px solid #eb734a;
+}
+
+@media screen and (max-width: $medium) {
+font-size: 18px;
+}
+@media screen and (max-width: $small) {
+font-size: 18px;
+}
+}
+.restText{
+font-size: 16px;
+color: #282E33;
+width: 70%;
+line-height: 1.6;
+
+@media screen and (max-width: $medium) {
+font-size: 14px;
+width: 90%;
+}
+@media screen and (max-width: $small) {
+font-size: 14px;
+width: 90%;
+}
+}
+}
