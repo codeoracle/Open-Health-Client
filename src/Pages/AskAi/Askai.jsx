@@ -20,7 +20,7 @@ const Askai = ({ setResult }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5250/symptoms/askai', formData);
+      const response = await axios.post('https://open-health.onrender.com/', formData);
 
       if (response.status === 200) {
         const responseData = response.data;
