@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 
-
 const Progress = ({ targetNumber, duration }) => {
+  const [progress, setProgress] = useState(0);
 
-    const [progress, setProgress] = useState(0);
-
-     useEffect(() => {
+  useEffect(() => {
     let startTimestamp;
     const increment = () => {
       const now = Date.now();
@@ -19,17 +17,21 @@ const Progress = ({ targetNumber, duration }) => {
       }
     };
 
-    const startAnimation = () => {
-      startTimestamp = Date.now();
-      requestAnimationFrame(increment);
-    };
-
-    startAnimation();
+    startTimestamp = Date.now();
+    requestAnimationFrame(increment);
   }, [targetNumber, duration]);
 
   return (
-    <div>{progress}</div>
-  )
-}
+    <div className="progress-stat">
+      <span className="progress-stat__number">{progress}%</span>
+      <div className="progress-stat__bar">
+        <div
+          className="progress-stat__fill"
+          style={{ width: `${targetNumber ? (progress / targetNumber) * 100 : 0}%` }}
+        />
+      </div>
+    </div>
+  );
+};
 
-export default Progress
+export default Progress;

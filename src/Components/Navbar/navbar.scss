@@ -1,203 +1,135 @@
-$small: 900px;
-$medium: 1200px;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $color-white;
+  box-shadow: $shadow-sm;
+  transition: box-shadow $transition, background $transition;
 
-.navbar{
+  &--scrolled {
+    box-shadow: $shadow-md;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+  }
+
+  &__inner {
+    @include container;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: max-content;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: background-color 0.5s;
-    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.253);
-    box-shadow: 2px 4px 10px 1px rgba(170, 170, 170, 0.518);
-    background: #fff;
+    justify-content: space-between;
+    height: $navbar-height;
+  }
 
-.navWrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding-top: 20px;
-  margin-left: 12%;
-  margin-right: 12%;
-
-  @media screen and (max-width: $medium) {
-    padding-top: 10px;
-    }
-    @media screen and (max-width: $small) {
-    padding-top: 10px;
-    }
-
-  .logoWrap {
+  &__logo {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding-bottom: 20px;
+    gap: $space-xs;
     text-decoration: none;
+    z-index: 101;
+  }
 
-   @media screen and (max-width: $medium) {
-    padding-bottom: 10px;
-    }
-    @media screen and (max-width: $small) {
-    padding-bottom: 10px;
-    }
+  &__logo-icon {
+    color: $color-accent-bg !important;
+    font-size: 30px !important;
+  }
 
-    .logoIcon {
-      color: #eb734a;
-      font-size: 30px;
-      font-weight: bold;
-    }
+  &__logo-text {
+    color: $color-primary;
+    font-size: $font-size-xl;
+    font-weight: 700;
+  }
 
-    .logo {
-      color: #003e48;
-      font-size: 24px;
-      font-weight: bold;
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+  }
+
+  &__link {
+    color: $color-text;
+    font-size: $font-size-base;
+    text-decoration: none;
+    font-weight: 500;
+    padding: $space-xs 0;
+    border-bottom: 2px solid transparent;
+    transition: color $transition, border-color $transition;
+
+    &:hover {
+      color: $color-accent;
+      border-bottom-color: $color-accent;
     }
   }
 
-  .menuWrap {
-    display: flex;
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $color-accent;
+    z-index: 101;
+    padding: $space-xs;
 
-
-    @media screen and (max-width: $medium) {
-      flex-direction: column;
-      gap: 15px;
-      width: 100%;
-      position: absolute;
-      top: 80px;
-      left: -110%;
-      opacity: 1;
-      transition: all 0.5s ease;
-
-      &.active {
-        padding: 20px;
-        background: #a09f9f;
-        left: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-      }
+    svg {
+      font-size: 28px;
     }
-    @media screen and (max-width: $small) {
-      flex-direction: column;
-      gap: 15px;
-      width: 100%;
-      position: absolute;
-      top: 80px;
-      left: -110%;
-      opacity: 1;
-      transition: all 0.5s ease;
+  }
 
-      &.active {
-        padding: 20px;
-        background: #a09f9f;
-        left: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-      }
-    }
+  &__overlay {
+    display: none;
+  }
 
-    .menu {
+  @include respond-to(medium) {
+    &__toggle {
       display: flex;
       align-items: center;
-      gap: 50px;
-      margin-right: 80px;
+      justify-content: center;
+    }
 
-      @media screen and (max-width: $medium) {
-        flex-direction: column;
-        gap: 30px;
-      }
-      @media screen and (max-width: $small) {
-        flex-direction: column;
-        gap: 30px;
-      }
+    &__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(320px, 85vw);
+      height: 100vh;
+      background: $color-white;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: calc(#{$navbar-height} + #{$space-md}) $space-md $space-md;
+      gap: $space-lg;
+      box-shadow: $shadow-lg;
+      transition: right $transition;
+      z-index: 100;
 
-      .menuList {
-        color: #282e33;
-        font-size: 16px;
-        cursor: pointer;
-        padding-bottom: 20px;
-        text-decoration: none;
-
-        &:hover {
-          color: #e85a2e;
-          border-bottom: 2px solid #e85a2e;
-        }
+      &--open {
+        right: 0;
       }
     }
 
-    .btnWrap {
-      padding-bottom: 20px;
-      text-decoration: none;
-      margin-left: 100px;
+    &__links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $space-md;
+      width: 100%;
+    }
 
-      .btn {
-        background-color: #e85a2e;
-        border: 2px solid #e85a2e;
-        border-radius: 4px;
-        color: #fff;
-        padding: 10px 30px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
+    &__link {
+      font-size: $font-size-lg;
+      width: 100%;
+      padding: $space-xs 0;
+    }
 
-        &:hover {
-          background-color: transparent;
-          border: 2px solid #e85a2e;
-          color: #e85a2e;
-        }
-      }
+    &__overlay {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 99;
     }
   }
-
-  .nav-icon {
-    display: none;
-
-    @media screen and (max-width: $medium) {
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translate(-100%, -50%);
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
-      color: #eb734a;
-
-      .icon {
-        width: 3rem;
-        height: 3rem;
-
-        @media screen and (max-width: $medium) {
-          width: 2rem;
-          height: 2rem;
-        }
-      }
-    }
-    @media screen and (max-width: $small) {
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translate(-100%, -50%);
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
-      color: #eb734a;
-
-      .icon {
-        width: 3rem;
-        height: 3rem;
-
-        @media screen and (max-width: $small) {
-          width: 2rem;
-          height: 2rem;
-        }
-      }
-    }
-  }
-}
 }

@@ -1,0 +1,48 @@
+.tool-detail {
+  padding: $space-lg 0;
+
+  &__header {
+    margin-bottom: $space-lg;
+    max-width: 600px;
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    color: $color-primary;
+    margin-bottom: $space-xs;
+  }
+
+  &__desc {
+    font-size: $font-size-base;
+    color: $color-text-muted;
+    line-height: 1.6;
+    margin-bottom: $space-sm;
+  }
+
+  &__problem {
+    display: inline-block;
+    font-size: $font-size-xs;
+    color: $color-accent;
+    font-weight: 600;
+    background: $color-accent-light;
+    padding: 4px 12px;
+    border-radius: 16px;
+  }
+
+  &__error {
+    background: rgba(211, 47, 47, 0.08);
+    border: 1px solid rgba(211, 47, 47, 0.3);
+    color: $color-error;
+    padding: $space-sm;
+    border-radius: $radius-sm;
+    margin-bottom: $space-md;
+    font-size: $font-size-sm;
+  }
+
+  &__form {
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+}

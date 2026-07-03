@@ -1,0 +1,83 @@
+.immunization {
+  margin: $space-lg 0;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-sm;
+    margin-bottom: $space-md;
+  }
+
+  &__icon {
+    color: $color-accent !important;
+    font-size: 32px !important;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    color: $color-primary;
+    margin: 0 0 4px;
+  }
+
+  &__note {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin: 0;
+  }
+
+  &__table-wrap {
+    overflow-x: auto;
+    border-radius: $radius-md;
+    border: 1px solid $color-border;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: $font-size-sm;
+
+    th {
+      background: $color-primary;
+      color: $color-white;
+      padding: $space-sm $space-md;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: $space-sm $space-md;
+      border-bottom: 1px solid $color-border;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: $color-bg;
+    }
+  }
+
+  &__age {
+    font-weight: 600;
+    color: $color-primary;
+    white-space: nowrap;
+  }
+
+  &__vaccines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  &__vaccine {
+    background: $color-accent-light;
+    color: $color-accent;
+    font-size: $font-size-xs;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+}

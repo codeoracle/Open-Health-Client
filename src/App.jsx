@@ -1,28 +1,28 @@
-import { useState } from "react";
-// import Footer from "./Components/Footer/Footer"
-import Navbar from "./Components/Navbar/Navbar"
-import Home from "./Pages/Home/Home"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Pages/Home/Home";
 import Askai from "./Pages/AskAi/Askai";
 import Result from "./Pages/Result/Result";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import History from "./Pages/History/History";
+import Tools from "./Pages/Tools/Tools";
+import ToolDetail from "./Pages/Tools/ToolDetail";
 
 function App() {
-
- //👇🏻 state holding the result
-     const [result, setResult] = useState({});
-
-    return (      
-            <BrowserRouter>
-            <Navbar/>
-            <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/askai' element={<Askai setResult={setResult} />} />
-                    <Route path='/result' element={<Result result={result} />} />
-                </Routes>
-              {/* <Footer/> */}
-            </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/askai" element={<Askai />} />
+          <Route path="/tools" element={<Tools />} />
+          <Route path="/tools/:toolId" element={<ToolDetail />} />
+          <Route path="/result/:sessionId" element={<Result />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

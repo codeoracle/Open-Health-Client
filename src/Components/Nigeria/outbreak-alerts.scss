@@ -1,0 +1,81 @@
+.outbreak-alerts {
+  margin: $space-lg 0;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    margin-bottom: $space-md;
+  }
+
+  &__icon {
+    color: $color-warning !important;
+    font-size: 28px !important;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    color: $color-primary;
+    margin: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $space-sm;
+  }
+
+  &__item {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: $space-md;
+    border-left: 4px solid $color-info;
+
+    &--high {
+      border-left-color: $color-error;
+      background: rgba(211, 47, 47, 0.04);
+    }
+
+    &--medium {
+      border-left-color: $color-warning;
+      background: rgba(237, 108, 2, 0.04);
+    }
+  }
+
+  &__item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $space-xs;
+    margin-bottom: $space-xs;
+    flex-wrap: wrap;
+
+    strong {
+      color: $color-primary;
+      font-size: $font-size-base;
+    }
+  }
+
+  &__season {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    background: $color-bg;
+    padding: 2px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  &__symptoms,
+  &__action,
+  &__regions {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    margin: 4px 0 0;
+    line-height: 1.5;
+
+    strong {
+      color: $color-text;
+    }
+  }
+}

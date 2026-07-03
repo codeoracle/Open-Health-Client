@@ -1,0 +1,101 @@
+.history {
+  padding: $space-lg 0;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    margin-bottom: $space-xl;
+  }
+
+  &__icon {
+    color: $color-accent !important;
+    font-size: 40px !important;
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    color: $color-primary;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: $font-size-base;
+    color: $color-text-muted;
+    margin: 0;
+  }
+
+  &__loading,
+  &__empty {
+    text-align: center;
+    padding: $space-xl;
+    color: $color-text-muted;
+
+    p { margin-bottom: $space-md; }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: $space-md;
+    cursor: pointer;
+    font-family: $font-family;
+    transition: box-shadow $transition, border-color $transition;
+
+    &:hover {
+      box-shadow: $shadow-sm;
+      border-color: $color-accent;
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__item-name {
+    font-size: $font-size-base;
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  &__item-symptoms {
+    font-size: $font-size-sm;
+    color: $color-text;
+  }
+
+  &__item-meta {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+  }
+
+  &__demo {
+    background: $color-accent-light;
+    color: $color-accent;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  &__arrow {
+    color: $color-accent !important;
+    font-size: 16px !important;
+    flex-shrink: 0;
+  }
+}

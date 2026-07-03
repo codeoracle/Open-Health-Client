@@ -1,0 +1,28 @@
+.card {
+  background: $color-white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  padding: $space-md;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  &--hover {
+    @include card-hover;
+  }
+
+  &--accent {
+    border-top: 3px solid $color-accent-bg;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: $space-sm;
+  }
+
+  &__body {
+    font-size: $font-size-base;
+    color: $color-text;
+    line-height: 1.6;
+  }
+}

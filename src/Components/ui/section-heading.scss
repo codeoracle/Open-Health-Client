@@ -1,0 +1,42 @@
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  margin-bottom: $space-lg;
+
+  &--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  &--left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    color: $color-primary;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include respond-to(small) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__highlight {
+    color: $color-accent;
+  }
+
+  &__subtitle {
+    font-size: $font-size-lg;
+    color: $color-text-muted;
+    max-width: 640px;
+    line-height: 1.6;
+
+    @include respond-to(small) {
+      font-size: $font-size-sm;
+    }
+  }
+}

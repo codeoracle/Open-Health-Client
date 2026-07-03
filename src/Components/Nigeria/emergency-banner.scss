@@ -1,0 +1,46 @@
+.emergency-banner {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  background: rgba(211, 47, 47, 0.08);
+  border: 1px solid rgba(211, 47, 47, 0.25);
+  border-radius: $radius-md;
+  padding: $space-sm $space-md;
+  margin-bottom: $space-md;
+
+  &__icon {
+    color: $color-error !important;
+    font-size: 28px !important;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    strong {
+      display: block;
+      font-size: $font-size-sm;
+      color: $color-error;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+  }
+
+  &__link {
+    font-size: $font-size-xs;
+    color: $color-text;
+    text-decoration: none;
+
+    span {
+      font-weight: 700;
+      color: $color-error;
+    }
+
+    &:hover span {
+      text-decoration: underline;
+    }
+  }
+}
