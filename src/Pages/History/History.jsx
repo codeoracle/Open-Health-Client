@@ -39,7 +39,7 @@ const History = () => {
           <div>
             <h1 className="history__title">Your Health Check History</h1>
             <p className="history__subtitle">
-              Review past symptom checks and continue conversations
+              Past checks from this device only — not shared with other users
             </p>
           </div>
         </div>

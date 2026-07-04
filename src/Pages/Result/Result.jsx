@@ -62,8 +62,13 @@ const Result = () => {
         setSession(data.session);
         setMessages(data.messages || []);
       })
-      .catch(() => {
-        setError('Session not found. Please start a new symptom check.');
+      .catch((err) => {
+        const status = err.response?.status;
+        if (status === 403) {
+          setError('You do not have access to this session.');
+        } else {
+          setError('Session not found. Please start a new symptom check.');
+        }
       })
       .finally(() => setLoading(false));
   }, [sessionId, navigate]);

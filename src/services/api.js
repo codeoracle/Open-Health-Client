@@ -1,8 +1,14 @@
 import axios from 'axios';
+import { getClientId } from '../utils/clientId';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5400';
 
 const api = axios.create({ baseURL: API_BASE_URL });
+
+api.interceptors.request.use((config) => {
+  config.headers['X-Client-Id'] = getClientId();
+  return config;
+});
 
 export const checkSymptoms = (data) =>
   api.post('/symptoms/askai', data);
