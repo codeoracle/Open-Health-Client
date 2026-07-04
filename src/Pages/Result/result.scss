@@ -90,12 +90,6 @@
     gap: $space-md;
   }
 
-  &__right {
-    @include respond-to(medium) {
-      order: -1;
-    }
-  }
-
   &__actions-panel {
     margin-bottom: $space-lg;
   }
